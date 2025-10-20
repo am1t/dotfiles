@@ -8,10 +8,10 @@
 
 ```bash
 # One-liner bootstrap (installs everything)
-curl -fsSL https://raw.githubusercontent.com/asifmomin/dotfiles/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/am1t/dotfiles/main/bootstrap.sh | bash
 
 # OR manual installation
-git clone https://github.com/asifmomin/dotfiles.git ~/dotfiles
+git clone https://github.com/am1t/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 just bootstrap
 
@@ -20,7 +20,7 @@ just bootstrap
 
 ## Features
 
-- 🎨 **Tokyo Night theme** - Consistent colors across all applications
+- 🎨 **Custom Musings theme** - Consistent colors across all applications
 - 📦 **Stow-managed** - Clean symlink management with XDG-first approach  
 - 🍺 **Homebrew** - Cross-platform package management
 - 🔒 **SOPS + age** - Modern encrypted secrets management
@@ -50,7 +50,7 @@ just bootstrap
 
 ### Advanced Features
 - **SOPS + age** - Encrypted secrets management for API keys and credentials
-- **Tokyo Night theme** - Unified color palette across all applications
+- **Musings theme** - Unified color palette across all applications
 - **XDG compliance** - Clean config organization in ~/.config/
 - **Cross-platform** - Works identically on macOS, Linux, and WSL
 

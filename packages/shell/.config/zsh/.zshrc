@@ -146,6 +146,15 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
+# Addons
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Optional tuning
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Welcome Message
 # ─────────────────────────────────────────────────────────────────────────────

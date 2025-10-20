@@ -5,45 +5,43 @@
 TERM = "xterm-256color"
 
 [window]
-padding.x = 14
-padding.y = 14
-decorations = "None"
-opacity = 0.95
+decorations = "transparent"
 blur = true
+dynamic_padding = true
 
 [font]
-normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
-bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
-italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
-bold_italic = { family = "CaskaydiaMono Nerd Font", style = "Bold Italic" }
-size = 9
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+bold = { family = "FiraCode Nerd Font", style = "Bold" }
+italic = { family = "FiraCode Nerd Font", style = "Italic" }
+bold_italic = { family = "FiraCode Nerd Font", style = "Bold Italic" }
+size = 14
 
 # Tokyo Night Color Scheme
 [colors.primary]
-background = '#1a1b26'
-foreground = '#a9b1d6'
+background = '#1E1E1E'
+foreground = '#D0D0D0'
 
 # Normal colors
 [colors.normal]
-black = '#32344a'
-red = '#f7768e'
-green = '#9ece6a'
-yellow = '#e0af68'
-blue = '#7aa2f7'
-magenta = '#ad8ee6'
-cyan = '#449dab'
-white = '#787c99'
+black = '#000000'
+red = '#FF5F56'
+green = '#27C93F'
+yellow = '#FFBD2E'
+blue = '#268BD2'
+magenta = '#AF00FF'
+cyan = '#2AA198'
+white = '#EAEAEA'
 
 # Bright colors
 [colors.bright]
-black = '#444b6a'
-red = '#ff7a93'
-green = '#b9f27c'
-yellow = '#ff9e64'
-blue = '#7da6ff'
-magenta = '#bb9af7'
-cyan = '#0db9d7'
-white = '#acb0d0'
+black = '#555555'
+red = '#FF5F56'
+green = '#27C93F'
+yellow = '#FFBD2E'
+blue = '#268BD2'
+magenta = '#AF00FF'
+cyan = '#2AA198'
+white = '#FFFFFF'
 
 [colors.selection]
 background = '#283457'

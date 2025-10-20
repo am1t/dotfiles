@@ -51,8 +51,12 @@ brew "watch" unless OS.mac?      # Execute commands periodically (macOS has diff
 brew "fastfetch"    # System information display
 brew "htop"         # Process viewer (fallback for btop)
 
+# Zsh addons
+brew "zsh-autosuggestions"
+brew "zsh-history-substring-search"
+
 # Fonts - matching Omarchy font system
-cask "font-caskaydia-mono-nerd-font"    # Primary monospace (terminal/code)
+cask "font-fira-code"    # Primary monospace (terminal/code)
 cask "font-liberation"                   # System UI fonts (Sans/Serif)
 cask "font-noto-sans"                    # International support
 cask "font-noto-serif"                   # Document reading
@@ -64,6 +68,7 @@ cask "font-fira-code-nerd-font"
 
 # Terminal emulator (cross-platform)
 cask "alacritty"
+cask "iterm2" if OS.mac?
 
 # Code editor (macOS only - install manually on Linux/WSL)
 if OS.mac?
