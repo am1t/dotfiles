@@ -155,6 +155,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+export PATH="$(npm config get prefix)/bin:$PATH"
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Welcome Message
 # ─────────────────────────────────────────────────────────────────────────────
