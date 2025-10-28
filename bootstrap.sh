@@ -223,7 +223,7 @@ backup_configs() {
     # List of common config files/dirs to backup
     local configs=(
         ".zshrc" ".bashrc" ".gitconfig" ".tmux.conf"
-        ".config/alacritty" ".config/nvim" ".config/starship.toml"
+        ".config/ghostty" ".config/nvim" ".config/starship.toml"
         ".config/git" ".config/tmux" ".config/zsh"
     )
     

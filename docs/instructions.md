@@ -264,7 +264,7 @@ cat README.md  # Enhanced with bat
 
 ```bash
 # Install additional macOS apps (optional)
-brew install --cask visual-studio-code iterm2
+brew install --cask visual-studio-code
 
 # Configure macOS defaults (optional)
 defaults write com.apple.dock autohide -bool true
@@ -347,9 +347,9 @@ just bootstrap
 **Problem**: Terminal shows squares instead of icons
 
 **Solution**:
-- Configure your terminal to use **CaskaydiaMono Nerd Font**
+- Configure your terminal to use **FiraCode Nerd Font**
 - Font is already installed via Homebrew
-- For Alacritty, font is pre-configured
+- For Ghostty, font is pre-configured
 
 #### Git Identity Not Switching
 

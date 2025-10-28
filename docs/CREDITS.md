@@ -35,7 +35,7 @@ This dotfiles setup leverages excellent open-source projects:
 - **[Neovim](https://neovim.io/)** - Modern vim-based editor
 - **[LazyVim](https://www.lazyvim.org/)** - Neovim configuration framework
 - **[Tmux](https://github.com/tmux/tmux)** - Terminal multiplexer
-- **[Alacritty](https://alacritty.org/)** - GPU-accelerated terminal
+- **[Ghostty](https://ghostty.org/)** - Fast, feature-rich terminal emulator
 - **[Starship](https://starship.rs/)** - Cross-shell prompt
 - **[mise](https://mise.jdx.dev/)** - Runtime version manager (replaces nvm, rbenv, pyenv)
 - **[direnv](https://direnv.net/)** - Per-directory environment management
