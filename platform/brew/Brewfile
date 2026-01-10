@@ -50,6 +50,7 @@ brew "watch" unless OS.mac?      # Execute commands periodically (macOS has diff
 # System info and monitoring
 brew "fastfetch"    # System information display
 brew "htop"         # Process viewer (fallback for btop)
+brew "witr"         # Process explanation tool (why is this running)
 
 # Zsh addons
 brew "zsh-autosuggestions"
