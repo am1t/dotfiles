@@ -39,11 +39,6 @@ fi
 # Archive operations
 # Note: compress() and extract() functions are defined in functions.zsh
 
-# File finding and searching
-if command -v fd >/dev/null 2>&1; then
-  alias find='fd'
-fi
-
 if command -v rg >/dev/null 2>&1; then
   alias grep='rg'
 fi

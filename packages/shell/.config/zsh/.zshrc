@@ -79,7 +79,14 @@ setopt EXTENDED_GLOB     # Use extended globbing syntax
 autoload -Uz compinit
 
 # Use XDG directory for zcompdump
-compinit -d "${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
+# Skip security check (compaudit) if dump file is fresh (under 20 hours old)
+local zcompdump="${XDG_CACHE_HOME}/zsh/zcompdump-${ZSH_VERSION}"
+if [[ -n "$zcompdump"(#qN.mh+20) ]]; then
+  compinit -d "$zcompdump"
+else
+  compinit -C -d "$zcompdump"
+fi
+unset zcompdump
 
 # Completion options
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # Case insensitive matching
@@ -156,10 +163,11 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-export PATH="$(npm config get prefix)/bin:$PATH"
+# Lazy-load NVM: only initialize when nvm/node/npm/npx is first used
+nvm() { unset -f nvm node npm npx; [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"; nvm "$@"; }
+node() { unset -f nvm node npm npx; [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"; node "$@"; }
+npm() { unset -f nvm node npm npx; [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"; npm "$@"; }
+npx() { unset -f nvm node npm npx; [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"; npx "$@"; }
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Welcome Message
@@ -170,3 +178,7 @@ export PATH="$(npm config get prefix)/bin:$PATH"
 #     fastfetch --logo small
 #   fi
 # fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
