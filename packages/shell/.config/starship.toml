@@ -2,7 +2,7 @@
 # Based on Omarchy's minimal prompt with Tokyo Night colors
 
 add_newline = true
-command_timeout = 200
+command_timeout = 1000
 
 # Minimal format - just directory, git, and prompt
 format = "[$directory$git_branch$git_status]($style)$character"

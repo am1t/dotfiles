@@ -211,3 +211,6 @@ if grep -qi microsoft /proc/version 2>/dev/null; then
   alias pwsh='pwsh.exe'
   alias explorer='explorer.exe'
 fi
+
+# Claude Code
+alias cc=claude
